@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: win-tracker
+    runtime: python
+    buildCommand: ""
+    startCommand: "python wtapp.py"
+    env: python

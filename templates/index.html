@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Win Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    
+<body style="text-align:center; margin-top:50px;">
+  <h1>Win Tracker</h1>
+  <p>Track your daily wins, big or small.</p>
+
+  <h2>Your wins so far:</h2>
+<ul>
+  {% for win in wins %}
+    <li>
+      {{ win|e }}
+      <form method="post" action="{{ url_for('delete_win', index=loop.index0) }}" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  {% else %}
+    <li>No wins yet</li>
+  {% endfor %}
+</ul>
+
+
+    <h1>Enter your win for today</h1>
+    <form method="post" action="/">
+        <input type="text" name="win" required>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
+
