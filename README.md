@@ -7,18 +7,15 @@ Open the app in your browser.
 
 Type a win and submit.
 
-See your list of wins below.
+See your list of wins above.
 
 Delete wins if you want.
 
 How to run
-Install Flask (pip install Flask).
 
-Run the app (python app.py).
-
-Open http://localhost:5000 in your browser.
+Go to the following link:
+https://win-tracker.onrender.com
 
 Notes
-Wins are saved in a text file.
+Wins are saved in a text file on the server.
 
-No login, so everyone sees the same list.
